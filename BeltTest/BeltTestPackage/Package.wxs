@@ -15,11 +15,21 @@
   </Package>
 
   <Fragment>
+    <ComponentGroup Id="LegalStuff">
+        <Component Directory="INSTALLFOLDER" Subdirectory="legal">
+          <File Source="..\legal\SPONSORS.txt" />   
+        </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
     <Feature Id="Main">
       <ComponentGroupRef Id="ClassLibraryComponents" />
       <ComponentGroupRef Id="ConsoleAppComponents" />
       <ComponentGroupRef Id="WindowsFormsAppComponents" />
       <ComponentGroupRef Id="WindowsServiceComponents" />
+      <ComponentGroupRef Id="LegalStuff" />
     </Feature>
   </Fragment>
+
 </Wix>
